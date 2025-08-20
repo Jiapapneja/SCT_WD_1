@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Caffora</title>
+
+  <!-- Minimal, elegant font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="homepage.css" />
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="site-header" id="top">
+    <nav class="nav">
+      <a class="brand" href="#top">Caffora</a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link btn-outline">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="section hero">
+    <div class="hero-inner">
+      <h1>Calm coffee. Clean design.</h1>
+      <p>Single-origin brews, quiet corners, and a minimal menu.</p>
+      <a href="#menu" class="btn-primary">View Menu</a>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu" class="section container">
+    <h2 class="section-title">Menu</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Espresso</h3>
+        <p>Rich, balanced shot.</p>
+        <span class="price">₹120</span>
+      </article>
+      <article class="card">
+        <h3>Americano</h3>
+        <p>Espresso with hot water.</p>
+        <span class="price">₹140</span>
+      </article>
+      <article class="card">
+        <h3>Cappuccino</h3>
+        <p>Foamed milk, smooth finish.</p>
+        <span class="price">₹180</span>
+      </article>
+      <article class="card">
+        <h3>Cold Brew</h3>
+        <p>Slow-steeped, low acidity.</p>
+        <span class="price">₹200</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section container about">
+    <div class="about-text">
+      <h2 class="section-title">About</h2>
+      <p>
+        Caffora is a minimal coffee space focused on clarity—clean flavors, clean design.
+        We source responsibly and brew with care.
+      </p>
+    </div>
+    <div class="about-media">
+      <!-- Replace with your own image -->
+      <div class="about-img" role="img" aria-label="Caffora interior placeholder"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section container contact">
+    <h2 class="section-title">Contact</h2>
+    <form class="contact-form" action="#" method="post" novalidate>
+      <div class="row">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+      </div>
+      <textarea name="message" rows="4" placeholder="Message"></textarea>
+      <button type="submit" class="btn-primary">Send</button>
+      <p class="form-note">This is a demo form. Hook it to a backend later.</p>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Caffora</span>
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="homepage.js"></script>
+</body>
+</html>
