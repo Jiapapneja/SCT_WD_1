@@ -27,3 +27,9 @@ The website is designed to represent a modern café, showcasing its menu, story,
 1. Clone the repository:  
    ```bash
    git clone https://github.com/Jiapapneja/SCT_WD_1.git
+
+2. Navigate to the project folder:  
+   cd SCT_WD_1  
+
+3. Open `hpmepage.html` in your browser.
+
