@@ -31,5 +31,5 @@ The website is designed to represent a modern café, showcasing its menu, story,
 2. Navigate to the project folder:  
    cd SCT_WD_1  
 
-3. Open `hpmepage.html` in your browser.
+3. Open `homepage.html` in your browser.
 
