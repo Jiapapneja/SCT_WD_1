@@ -1,21 +1,16 @@
-// Sticky nav background on scroll + active link highlight + mobile menu
-
-// Cache DOM
-const nav = document.querySelector('.nav');
+// ===== NAVBAR TOGGLE + SCROLL COLOR =====
+const nav = document.querySelector('.site-header');
 const toggle = document.querySelector('.nav-toggle');
 const links = document.querySelector('.nav-links');
 const yearEl = document.getElementById('year');
+const cartCountEl = document.getElementById('cart-count');
 
-// Year in footer
+// Update year in footer
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Scroll behavior: add .scrolled to nav
+// Add "scrolled" class on scroll
 function onScroll() {
-  if (window.scrollY > 10) {
-    nav.classList.add('scrolled');
-  } else {
-    nav.classList.remove('scrolled');
-  }
+  nav.classList.toggle('scrolled', window.scrollY > 10);
 }
 window.addEventListener('scroll', onScroll);
 onScroll();
@@ -24,19 +19,23 @@ onScroll();
 if (toggle && links) {
   toggle.addEventListener('click', () => {
     const open = links.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : ''; // lock/unlock scroll
   });
 
-  // Close menu when a link is clicked
-  links.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => links.classList.remove('open'));
+  // Close menu on link click
+  links.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      links.classList.remove('open');
+      document.body.style.overflow = '';
+    });
   });
 }
 
-// Optional: smooth scroll for same-page links
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', (e) => {
-    const id = a.getAttribute('href');
+// Smooth scroll for same-page links
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    const id = link.getAttribute('href');
     const target = document.querySelector(id);
     if (target) {
       e.preventDefault();
@@ -45,3 +44,46 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   });
 });
+
+// ===== MENU CARD SCROLL ANIMATION =====
+const menuCards = document.querySelectorAll('.menu-card');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle('show', entry.isIntersecting);
+  });
+}, { threshold: 0.5 });
+
+menuCards.forEach(card => observer.observe(card));
+
+// ===== CART SYSTEM =====
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// Update cart count in navbar
+function updateCartCount() {
+  if (cartCountEl) {
+    cartCountEl.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+  }
+}
+
+// Add to cart function
+function addToCart(itemName, price) {
+  let existing = cart.find(i => i.name === itemName);
+  if (existing) {
+    existing.qty++;
+  } else {
+    cart.push({ name: itemName, price: price, qty: 1 });
+  }
+
+  // Save cart to localStorage
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartCount();
+}
+
+// Redirect to cart page
+function goToCart() {
+  window.location.href = "cart.html";
+}
+
+// Initialize cart count on load
+document.addEventListener("DOMContentLoaded", updateCartCount);

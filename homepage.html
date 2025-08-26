@@ -1,4 +1,3 @@
-</html> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,15 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Caffora</title>
 
-  <!-- Minimal, elegant font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="homepage.css" />
 </head>
 <body>
+
   <!-- Header / Navbar -->
   <header class="site-header" id="top">
     <nav class="nav">
@@ -28,9 +26,10 @@
 
       <ul class="nav-links">
         <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#menu.html" class="nav-link">Menu</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#contact" class="nav-link btn-outline">Contact</a></li>
+        <button class="cart-btn" onclick="goToCart()"> CART (<span id="cart-count">0</span>)</button>
       </ul>
     </nav>
   </header>
@@ -44,63 +43,235 @@
     </div>
   </section>
 
- <!-- Menu -->
-<section id="menu" class="section container">
+  <!-- Menu -->
+  <section id="menu" class="section container">
   <h2 class="section-title">Menu</h2>
 
-  <div class="menu-grid">
-    <div class="menu-card">
-      <div class="menu-text">
-        <h3>Espresso</h3>
-        <p>Rich, balanced shot.</p>
-        <span class="price">₹120</span>
-      </div>
-      <img src="images/espresso.jpg" alt="Espresso" class="menu-img">
+  <!-- Coffee Section -->
+<h3 class="menu-category-title">Coffee</h3>
+<div class="menu-grid">
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Espresso</h3>
+      <p>Bold, rich shot with a smooth, caramel crema.</p>
+      <span class="price">₹120</span>
+      <button class="order-btn" onclick="addToCart('Espresso', 120)">Add to Cart</button>
     </div>
-
-    <div class="menu-card">
-      <div class="menu-text">
-        <h3>Americano</h3>
-        <p>Espresso with hot water.</p>
-        <span class="price">₹140</span>
-      </div>
-      <img src="images/Americano (Espresso with hot water).jpg" alt="Americano" class="menu-img">
-    </div>
-
-    <div class="menu-card">
-      <div class="menu-text">
-        <h3>Cappuccino</h3>
-        <p>Foamed milk, smooth finish.</p>
-        <span class="price">₹180</span>
-      </div>
-      <img src="images/capuccino.jpg" alt="Cappuccino" class="menu-img">
-    </div>
-
-    <div class="menu-card">
-      <div class="menu-text">
-        <h3>Cold Brew</h3>
-        <p>Slow-steeped, low acidity.</p>
-        <span class="price">₹200</span>
-      </div>
-      <img src="images/Cold Brew Coffee.jpg" alt="Cold Brew" class="menu-img">
-    </div>
+    <img src="images/Espresso.jpg" alt="Espresso" class="menu-img">
   </div>
-</section>
 
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Americano</h3>
+      <p>Espresso softened with hot water for a lighter sip.</p>
+      <span class="price">₹140</span>
+      <button class="order-btn" onclick="addToCart('Americano', 140)">Add to Cart</button>
+    </div>
+    <img src="images/Americano.png" alt="Americano" class="menu-img">
+  </div>
 
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Cappuccino</h3>
+      <p>Espresso blended with silky milk and airy foam.</p>
+      <span class="price">₹180</span>
+      <button class="order-btn" onclick="addToCart('Cappuccino', 180)">Add to Cart</button>
+    </div>
+    <img src="images/Cappuccino.jpg" alt="Cappuccino" class="menu-img">
+  </div>
 
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Latte</h3>
+      <p>Espresso mellowed with steamed milk and a hint of sweetness.</p>
+      <span class="price">₹190</span>
+      <button class="order-btn" onclick="addToCart('Latte', 190)">Add to Cart</button>
+    </div>
+    <img src="images/Latte.jpg" alt="Latte" class="menu-img">
+  </div>
+</div>
+
+<!-- Brew Section -->
+<h3 class="menu-category-title">Brews & Specials</h3>
+<div class="menu-grid">
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Cold Brew</h3>
+      <p>Slow-steeped for a smooth, naturally sweet flavor.</p>
+      <span class="price">₹200</span>
+      <button class="order-btn" onclick="addToCart('Cold Brew', 200)">Add to Cart</button>
+    </div>
+    <img src="images/Cold Brew Coffee.jpg" alt="Cold Brew" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Mocha</h3>
+      <p>A chocolate-infused coffee indulgence.</p>
+      <span class="price">₹210</span>
+      <button class="order-btn" onclick="addToCart('Mocha', 210)">Add to Cart</button>
+    </div>
+    <img src="images/mocha latte.jpg" alt="Mocha" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Affogato</h3>
+      <p>Espresso poured over creamy vanilla ice cream.</p>
+      <span class="price">₹230</span>
+      <button class="order-btn" onclick="addToCart('Affogato', 230)">Add to Cart</button>
+    </div>
+    <img src="images/Affogato.jpg" alt="Affogato" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Iced Latte</h3>
+      <p>Chilled espresso with milk served over ice.</p>
+      <span class="price">₹210</span>
+      <button class="order-btn" onclick="addToCart('Iced Latte', 210)">Add to Cart</button>
+    </div>
+    <img src="images/iced latte.jpg" alt="Iced Latte" class="menu-img">
+  </div>
+</div>
+
+<!-- Cold Beverages -->
+<h3 class="menu-category-title">Cold Beverages</h3>
+<div class="menu-grid">
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Java Chip Coffee</h3>
+      <p>Bold espresso blended with chocolate and crunchy java chips.</p>
+      <span class="price">₹220</span>
+      <button class="order-btn" onclick="addToCart('Java Chip Coffee', 220)">Add to Cart</button>
+    </div>
+    <img src="images/Java Chip Frappuccino.jpg" alt="Java Chip Coffee" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Iced Americano</h3>
+      <p>Chilled espresso diluted with cold water.</p>
+      <span class="price">₹160</span>
+      <button class="order-btn" onclick="addToCart('Iced Americano', 160)">Add to Cart</button>
+    </div>
+    <img src="images/Iced Americano.jpg" alt="Iced Americano" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Frappuccino</h3>
+      <p>Blended coffee drink with whipped cream.</p>
+      <span class="price">₹250</span>
+      <button class="order-btn" onclick="addToCart('Frappuccino', 250)">Add to Cart</button>
+    </div>
+    <img src="images/Frappuccino.jpg" alt="Frappuccino" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Iced Mocha</h3>
+      <p>Chocolate and espresso served over ice.</p>
+      <span class="price">₹230</span>
+      <button class="order-btn" onclick="addToCart('Iced Mocha', 230)">Add to Cart</button>
+    </div>
+    <img src="images/Iced Mocha Latte.jpg" alt="Iced Mocha" class="menu-img">
+  </div>
+</div>
+
+<!-- Bakery Section -->
+<h3 class="menu-category-title">Bakery</h3>
+<div class="menu-grid">
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Chocolate Chip Cookie</h3>
+      <p>Classic chewy goodness with rich chocolate chips.</p>
+      <span class="price">₹80</span>
+      <button class="order-btn" onclick="addToCart('Chocolate Chip Cookie', 80)">Add to Cart</button>
+    </div>
+    <img src="images/Chocolate Chip Cookies.jpg" alt="Cookie" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Croissant</h3>
+      <p>Flaky, buttery pastry baked to golden perfection.</p>
+      <span class="price">₹120</span>
+      <button class="order-btn" onclick="addToCart('Croissant', 120)">Add to Cart</button>
+    </div>
+    <img src="images/Croissant.jpg" alt="Croissant" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Oreo Cookie</h3>
+      <p>Crunchy, creamy Oreo-filled indulgence.</p>
+      <span class="price">₹100</span>
+      <button class="order-btn" onclick="addToCart('Oreo Cookie', 100)">Add to Cart</button>
+    </div>
+    <img src="images/Oreo Chocolate Chip Cookies.jpg" alt="Oreo Cookie" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Choco Cookie Crumble</h3>
+      <p>Rich chocolate cookie with a crumbly twist.</p>
+      <span class="price">₹110</span>
+      <button class="order-btn" onclick="addToCart('Choco Cookie Crumble', 110)">Add to Cart</button>
+    </div>
+    <img src="images/choco crumble.jpg" alt="Choco Cookie Crumble" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Red Velvet Cookie</h3>
+      <p>Soft red velvet goodness with cream cheese flavor.</p>
+      <span class="price">₹120</span>
+      <button class="order-btn" onclick="addToCart('Red Velvet Cookie', 120)">Add to Cart</button>
+    </div>
+    <img src="images/Red Velvet Cookies.jpg" alt="Red Velvet Cookie" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Chocolate Brownie</h3>
+      <p>Fudgy, rich brownie that melts in your mouth.</p>
+      <span class="price">₹150</span>
+      <button class="order-btn" onclick="addToCart('Chocolate Brownie', 150)">Add to Cart</button>
+    </div>
+    <img src="images/Chocolate Chip Brownies.jpg" alt="Chocolate Brownie" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Red Velvet Cupcake</h3>
+      <p>Moist red velvet cupcake topped with cream cheese frosting.</p>
+      <span class="price">₹120</span>
+      <button class="order-btn" onclick="addToCart('Red Velvet Cupcake', 120)">Add to Cart</button>
+    </div>
+    <img src="images/Red Velvet Cupcakes.jpg" alt="Red Velvet Cupcake" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Blueberry Muffin</h3>
+      <p>Soft, moist muffin bursting with blueberries.</p>
+      <span class="price">₹130</span>
+      <button class="order-btn" onclick="addToCart('Blueberry Muffin', 130)">Add to Cart</button>
+    </div>
+    <img src="images/blueberry muffin.jpg" alt="Blueberry Muffin" class="menu-img">
+  </div>
+</div>
 
   <!-- About -->
   <section id="about" class="section container about">
     <div class="about-text">
       <h2 class="section-title">About</h2>
       <p>
-        Caffora is a minimal coffee space focused on clarity—clean flavors, clean design.
-        We source responsibly and brew with care.
+        Welcome to Caffora—a cozy space where coffee meets comfort. Here, every cup is brewed straight from the heart, using the finest beans to create rich flavors you’ll love. Whether you’re catching up with friends, creating memories, or simply taking a quiet moment for yourself, Caffora is your perfect escape. More than just coffee, it’s an experience filled with warmth, care, and a touch of happiness in every sip.
       </p>
     </div>
     <div class="about-media">
-      
       <div class="about-img" role="img" aria-label="Caffora interior placeholder"></div>
     </div>
   </section>
@@ -119,12 +290,24 @@
     </form>
   </section>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>© <span id="year"></span> Caffora</span>
       <a class="to-top" href="#top">Back to top</a>
     </div>
   </footer>
+
+  <!-- Modal -->
+  <div id="menuModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalImage" src="" alt="Menu Item Image">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+      <p id="modalPrice"></p>
+    </div>
+  </div>
 
   <script src="homepage.js"></script>
 </body>
