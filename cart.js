@@ -62,7 +62,7 @@ function showOrderModal() {
   });
 }
 
-// ✅ Toast Notification
+//  Toast Notification
 function showToast(message) {
   let toast = document.createElement("div");
   toast.className = "toast";

@@ -1,4 +1,4 @@
-// ===== NAVBAR TOGGLE + SCROLL =====
+//NAVBAR TOGGLE + SCROLL 
 const nav = document.querySelector('.site-header');
 const toggle = document.querySelector('.nav-toggle');
 const links = document.querySelector('.nav-links');
@@ -25,14 +25,14 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 10);
 });
 
-// ===== CART SYSTEM =====
+//  CART SYSTEM 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function updateCartCount() {
   cartCountEl.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
 }
 
-// ✅ single addToCart function (merged)
+// single addToCart function (merged)
 function addToCart(name, price, img = '') {
   let qtyElement = document.getElementById(`quantity-${name}`);
   let qty = qtyElement ? parseInt(qtyElement.innerText) : 1;
@@ -51,7 +51,7 @@ function addToCart(name, price, img = '') {
 
 document.addEventListener("DOMContentLoaded", updateCartCount);
 
-// ===== PRODUCT DETAIL MODAL =====
+// PRODUCT DETAIL MODAL 
 const menuModal = document.getElementById('menuDetailModal');
 const closeModalBtn = menuModal.querySelector('.menu-close');
 const detailImg = document.getElementById('detail-img');
@@ -97,7 +97,7 @@ addToCartBtn.addEventListener('click', () => {
   menuModal.classList.remove('show');
 });
 
-// ===== TOAST NOTIFICATION =====
+// TOAST NOTIFICATION 
 function showToast(message) {
   const toast = document.getElementById('toast');
   toast.textContent = message;
@@ -105,7 +105,7 @@ function showToast(message) {
   setTimeout(() => toast.classList.remove('show'), 2500);
 }
 
-// ===== NAV CART REDIRECT =====
+//  NAV CART REDIRECT 
 function goToCart() {
   window.location.href = "cart.html";
 }
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// ===== Quantity management =====
+//  Quantity management 
 function increaseQuantity(item) {
   let qtyElement = document.getElementById(`quantity-${item}`);
   let qty = parseInt(qtyElement.innerText);
