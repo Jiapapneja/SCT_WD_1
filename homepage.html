@@ -55,6 +55,11 @@
       <h3>Espresso</h3>
       <p>Bold, rich shot with a smooth, caramel crema.</p>
       <span class="price">₹120</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Espresso')">-</button>
+        <span id="quantity-Espresso">0</span>
+        <button onclick="increaseQuantity('Espresso')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Espresso', 120)">Add to Cart</button>
     </div>
     <img src="images/Espresso.jpg" alt="Espresso" class="menu-img">
@@ -65,6 +70,11 @@
       <h3>Americano</h3>
       <p>Espresso softened with hot water for a lighter sip.</p>
       <span class="price">₹140</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Americano')">-</button>
+        <span id="quantity-Americano">0</span>
+        <button onclick="increaseQuantity('Americano')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Americano', 140)">Add to Cart</button>
     </div>
     <img src="images/Americano.png" alt="Americano" class="menu-img">
@@ -72,9 +82,59 @@
 
   <div class="menu-card">
     <div class="menu-text">
+      <h3>Irish Coffee</h3>
+      <p>Hot coffee mixed with Irish cream for a rich taste.</p>
+      <span class="price">₹240</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Irish Coffee')">-</button>
+        <span id="quantity-Irish Coffee">0</span>
+        <button onclick="increaseQuantity('Irish Coffee')">+</button>
+      </div>
+      <button class="order-btn" onclick="addToCart('Irish Coffee', 240)">Add to Cart</button>
+    </div>
+    <img src="images/Irish Coffee.jpg" alt="Irish Coffee" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Flat White</h3>
+      <p>Velvety espresso topped with steamed milk microfoam.</p>
+      <span class="price">₹200</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Flat White')">-</button>
+        <span id="quantity-Flat White">0</span>
+        <button onclick="increaseQuantity('Flat White')">+</button>
+      </div>
+      <button class="order-btn" onclick="addToCart('Flat White', 200)">Add to Cart</button>
+    </div>
+    <img src="images/flat coffee.jpg" alt="Flat White" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Hot Chocolate</h3>
+      <p>Rich melted chocolate blended with steamed milk.</p>
+      <span class="price">₹180</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Hot Chocolate')">-</button>
+        <span id="quantity-Hot Chocolate">0</span>
+        <button onclick="increaseQuantity('Hot Chocolate')">+</button>
+      </div>
+      <button class="order-btn" onclick="addToCart('Hot Chocolate', 180)">Add to Cart</button>
+    </div>
+    <img src="images/hot chocolate.jpg" alt="Hot Chocolate" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
       <h3>Cappuccino</h3>
       <p>Espresso blended with silky milk and airy foam.</p>
       <span class="price">₹180</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Cappuccino')">-</button>
+        <span id="quantity-Cappuccino">0</span>
+        <button onclick="increaseQuantity('Cappuccino')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Cappuccino', 180)">Add to Cart</button>
     </div>
     <img src="images/Cappuccino.jpg" alt="Cappuccino" class="menu-img">
@@ -85,6 +145,11 @@
       <h3>Latte</h3>
       <p>Espresso mellowed with steamed milk and a hint of sweetness.</p>
       <span class="price">₹190</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Latte')">-</button>
+        <span id="quantity-Latte">0</span>
+        <button onclick="increaseQuantity('Latte')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Latte', 190)">Add to Cart</button>
     </div>
     <img src="images/Latte.jpg" alt="Latte" class="menu-img">
@@ -99,6 +164,11 @@
       <h3>Cold Brew</h3>
       <p>Slow-steeped for a smooth, naturally sweet flavor.</p>
       <span class="price">₹200</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Cold Brew')">-</button>
+        <span id="quantity-Cold Brew">0</span>
+        <button onclick="increaseQuantity('Cold Brew')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Cold Brew', 200)">Add to Cart</button>
     </div>
     <img src="images/Cold Brew Coffee.jpg" alt="Cold Brew" class="menu-img">
@@ -106,9 +176,29 @@
 
   <div class="menu-card">
     <div class="menu-text">
+      <h3>Hazelnut Coffee</h3>
+      <p>Freshly brewed coffee with a smooth hazelnut flavor.</p>
+      <span class="price">₹210</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Hazelnut Coffee')">-</button>
+        <span id="quantity-Hazelnut Coffee">0</span>
+        <button onclick="increaseQuantity('Hazelnut Coffee')">+</button>
+      </div>
+      <button class="order-btn" onclick="addToCart('Hazelnut Coffee', 210)">Add to Cart</button>
+    </div>
+    <img src="images/Hazelnut Iced Coffee.jpg" alt="Hazelnut Coffee" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
       <h3>Mocha</h3>
       <p>A chocolate-infused coffee indulgence.</p>
       <span class="price">₹210</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Mocha')">-</button>
+        <span id="quantity-Mocha">0</span>
+        <button onclick="increaseQuantity('Mocha')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Mocha', 210)">Add to Cart</button>
     </div>
     <img src="images/mocha latte.jpg" alt="Mocha" class="menu-img">
@@ -119,6 +209,11 @@
       <h3>Affogato</h3>
       <p>Espresso poured over creamy vanilla ice cream.</p>
       <span class="price">₹230</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Affogato')">-</button>
+        <span id="quantity-Affogato">0</span>
+        <button onclick="increaseQuantity('Affogato')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Affogato', 230)">Add to Cart</button>
     </div>
     <img src="images/Affogato.jpg" alt="Affogato" class="menu-img">
@@ -129,20 +224,32 @@
       <h3>Iced Latte</h3>
       <p>Chilled espresso with milk served over ice.</p>
       <span class="price">₹210</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Iced Latte')">-</button>
+        <span id="quantity-Iced Latte">0</span>
+        <button onclick="increaseQuantity('Iced Latte')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Iced Latte', 210)">Add to Cart</button>
     </div>
     <img src="images/iced latte.jpg" alt="Iced Latte" class="menu-img">
   </div>
 </div>
 
+
 <!-- Cold Beverages -->
 <h3 class="menu-category-title">Cold Beverages</h3>
 <div class="menu-grid">
+
   <div class="menu-card">
     <div class="menu-text">
       <h3>Java Chip Coffee</h3>
       <p>Bold espresso blended with chocolate and crunchy java chips.</p>
       <span class="price">₹220</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Java Chip Coffee')">-</button>
+        <span id="quantity-Java Chip Coffee">0</span>
+        <button onclick="increaseQuantity('Java Chip Coffee')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Java Chip Coffee', 220)">Add to Cart</button>
     </div>
     <img src="images/Java Chip Frappuccino.jpg" alt="Java Chip Coffee" class="menu-img">
@@ -150,9 +257,59 @@
 
   <div class="menu-card">
     <div class="menu-text">
+      <h3>Oreo Shake</h3>
+      <p>Crushed Oreos blended with chilled milk and vanilla ice cream.</p>
+      <span class="price">₹230</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Oreo Shake')">-</button>
+        <span id="quantity-Oreo Shake">0</span>
+        <button onclick="increaseQuantity('Oreo Shake')">+</button>
+      </div>
+      <button class="order-btn" onclick="addToCart('Oreo Shake', 230)">Add to Cart</button>
+    </div>
+    <img src="images/Oreo shake.jpg" alt="Oreo Shake" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Strawberry Smoothie</h3>
+      <p>Fresh strawberries blended with yogurt and ice.</p>
+      <span class="price">₹210</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Strawberry Smoothie')">-</button>
+        <span id="quantity-Strawberry Smoothie">0</span>
+        <button onclick="increaseQuantity('Strawberry Smoothie')">+</button>
+      </div>
+      <button class="order-btn" onclick="addToCart('Strawberry Smoothie', 210)">Add to Cart</button>
+    </div>
+    <img src="images/Strawberry  Smoothie.jpg" alt="Strawberry Smoothie" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
+      <h3>Vanilla Cold Coffee</h3>
+      <p>Classic chilled coffee blended with vanilla essence and milk.</p>
+      <span class="price">₹200</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Vanilla Cold Coffee')">-</button>
+        <span id="quantity-Vanilla Cold Coffee">0</span>
+        <button onclick="increaseQuantity('Vanilla Cold Coffee')">+</button>
+      </div>
+      <button class="order-btn" onclick="addToCart('Vanilla Cold Coffee', 200)">Add to Cart</button>
+    </div>
+    <img src="images/Vanilla Cold Coffee.jpg" alt="Vanilla Cold Coffee" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
       <h3>Iced Americano</h3>
       <p>Chilled espresso diluted with cold water.</p>
       <span class="price">₹160</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Iced Americano')">-</button>
+        <span id="quantity-Iced Americano">0</span>
+        <button onclick="increaseQuantity('Iced Americano')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Iced Americano', 160)">Add to Cart</button>
     </div>
     <img src="images/Iced Americano.jpg" alt="Iced Americano" class="menu-img">
@@ -163,6 +320,11 @@
       <h3>Frappuccino</h3>
       <p>Blended coffee drink with whipped cream.</p>
       <span class="price">₹250</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Frappuccino')">-</button>
+        <span id="quantity-Frappuccino">0</span>
+        <button onclick="increaseQuantity('Frappuccino')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Frappuccino', 250)">Add to Cart</button>
     </div>
     <img src="images/Frappuccino.jpg" alt="Frappuccino" class="menu-img">
@@ -173,20 +335,34 @@
       <h3>Iced Mocha</h3>
       <p>Chocolate and espresso served over ice.</p>
       <span class="price">₹230</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Iced Mocha')">-</button>
+        <span id="quantity-Iced Mocha">0</span>
+        <button onclick="increaseQuantity('Iced Mocha')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Iced Mocha', 230)">Add to Cart</button>
     </div>
     <img src="images/Iced Mocha Latte.jpg" alt="Iced Mocha" class="menu-img">
   </div>
+
 </div>
+
+
 
 <!-- Bakery Section -->
 <h3 class="menu-category-title">Bakery</h3>
 <div class="menu-grid">
+
   <div class="menu-card">
     <div class="menu-text">
       <h3>Chocolate Chip Cookie</h3>
       <p>Classic chewy goodness with rich chocolate chips.</p>
       <span class="price">₹80</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Chocolate Chip Cookie')">-</button>
+        <span id="quantity-Chocolate Chip Cookie">0</span>
+        <button onclick="increaseQuantity('Chocolate Chip Cookie')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Chocolate Chip Cookie', 80)">Add to Cart</button>
     </div>
     <img src="images/Chocolate Chip Cookies.jpg" alt="Cookie" class="menu-img">
@@ -197,6 +373,11 @@
       <h3>Croissant</h3>
       <p>Flaky, buttery pastry baked to golden perfection.</p>
       <span class="price">₹120</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Croissant')">-</button>
+        <span id="quantity-Croissant">0</span>
+        <button onclick="increaseQuantity('Croissant')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Croissant', 120)">Add to Cart</button>
     </div>
     <img src="images/Croissant.jpg" alt="Croissant" class="menu-img">
@@ -207,6 +388,11 @@
       <h3>Oreo Cookie</h3>
       <p>Crunchy, creamy Oreo-filled indulgence.</p>
       <span class="price">₹100</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Oreo Cookie')">-</button>
+        <span id="quantity-Oreo Cookie">0</span>
+        <button onclick="increaseQuantity('Oreo Cookie')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Oreo Cookie', 100)">Add to Cart</button>
     </div>
     <img src="images/Oreo Chocolate Chip Cookies.jpg" alt="Oreo Cookie" class="menu-img">
@@ -217,6 +403,11 @@
       <h3>Choco Cookie Crumble</h3>
       <p>Rich chocolate cookie with a crumbly twist.</p>
       <span class="price">₹110</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Choco Cookie Crumble')">-</button>
+        <span id="quantity-Choco Cookie Crumble">0</span>
+        <button onclick="increaseQuantity('Choco Cookie Crumble')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Choco Cookie Crumble', 110)">Add to Cart</button>
     </div>
     <img src="images/choco crumble.jpg" alt="Choco Cookie Crumble" class="menu-img">
@@ -224,9 +415,29 @@
 
   <div class="menu-card">
     <div class="menu-text">
+      <h3>Cheesecake</h3>
+      <p>Creamy baked cheesecake with a buttery biscuit base.</p>
+      <span class="price">₹250</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Cheesecake')">-</button>
+        <span id="quantity-Cheesecake">0</span>
+        <button onclick="increaseQuantity('Cheesecake')">+</button>
+      </div>
+      <button class="order-btn" onclick="addToCart('Cheesecake', 250)">Add to Cart</button>
+    </div>
+    <img src="images/Cheesecake.jpg" alt="Cheesecake" class="menu-img">
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-text">
       <h3>Red Velvet Cookie</h3>
       <p>Soft red velvet goodness with cream cheese flavor.</p>
       <span class="price">₹120</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Red Velvet Cookie')">-</button>
+        <span id="quantity-Red Velvet Cookie">0</span>
+        <button onclick="increaseQuantity('Red Velvet Cookie')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Red Velvet Cookie', 120)">Add to Cart</button>
     </div>
     <img src="images/Red Velvet Cookies.jpg" alt="Red Velvet Cookie" class="menu-img">
@@ -237,6 +448,11 @@
       <h3>Chocolate Brownie</h3>
       <p>Fudgy, rich brownie that melts in your mouth.</p>
       <span class="price">₹150</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Chocolate Brownie')">-</button>
+        <span id="quantity-Chocolate Brownie">0</span>
+        <button onclick="increaseQuantity('Chocolate Brownie')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Chocolate Brownie', 150)">Add to Cart</button>
     </div>
     <img src="images/Chocolate Chip Brownies.jpg" alt="Chocolate Brownie" class="menu-img">
@@ -247,6 +463,11 @@
       <h3>Red Velvet Cupcake</h3>
       <p>Moist red velvet cupcake topped with cream cheese frosting.</p>
       <span class="price">₹120</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Red Velvet Cupcake')">-</button>
+        <span id="quantity-Red Velvet Cupcake">0</span>
+        <button onclick="increaseQuantity('Red Velvet Cupcake')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Red Velvet Cupcake', 120)">Add to Cart</button>
     </div>
     <img src="images/Red Velvet Cupcakes.jpg" alt="Red Velvet Cupcake" class="menu-img">
@@ -257,11 +478,19 @@
       <h3>Blueberry Muffin</h3>
       <p>Soft, moist muffin bursting with blueberries.</p>
       <span class="price">₹130</span>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity('Blueberry Muffin')">-</button>
+        <span id="quantity-Blueberry Muffin">0</span>
+        <button onclick="increaseQuantity('Blueberry Muffin')">+</button>
+      </div>
       <button class="order-btn" onclick="addToCart('Blueberry Muffin', 130)">Add to Cart</button>
     </div>
     <img src="images/blueberry muffin.jpg" alt="Blueberry Muffin" class="menu-img">
   </div>
+
 </div>
+
+
 
   <!-- About -->
   <section id="about" class="section container about">
@@ -298,16 +527,20 @@
     </div>
   </footer>
 
-  <!-- Modal -->
-  <div id="menuModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <img id="modalImage" src="" alt="Menu Item Image">
-      <h2 id="modalTitle"></h2>
-      <p id="modalDesc"></p>
-      <p id="modalPrice"></p>
-    </div>
+  <!-- Product Detail Modal -->
+<div id="menuDetailModal" class="menu-modal">
+  <div class="menu-modal-content">
+    <span class="menu-close">&times;</span>
+    <img id="detail-img" src="" alt="Product Image" />
+    <h3 id="detail-title"></h3>
+    <p id="detail-desc"></p>
+    <p id="detail-price" class="price-text"></p>
+    <button id="addToCartBtn" class="btn-primary">Add to Cart</button>
   </div>
+</div>
+
+<!-- Toast Notification -->
+<div id="toast" class="toast">Item added to cart!</div>
 
   <script src="homepage.js"></script>
 </body>

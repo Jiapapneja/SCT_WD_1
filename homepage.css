@@ -275,14 +275,43 @@ body {
 
 /* Menu Card Scroll Animation */
 .menu-card {
-  opacity: 0;
-  transform: translateY(30px);
+  opacity: 1; /* Default visible */
+  transform: translateY(0);
   transition: all 0.8s ease-out;
 }
+
+.menu-card.hide {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
 .menu-card.show {
   opacity: 1;
   transform: translateY(0);
 }
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.quantity-selector button {
+  background-color: #6b4226;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quantity-selector span {
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
+}
+
 
 /* About */
 .about {
@@ -295,6 +324,95 @@ body {
   background: url('images/A barista pouring latte art into a coffee cup, with a wooden table in focus showing a book, coffee cup, and a plate of cookies, soft warm lighting, cozy café vibe..jpg') center/cover no-repeat, #e7e2dd;
   border-radius: 16px;
   min-height: 260px;
+}
+
+/* ===== Product Detail Modal ===== */
+.menu-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.menu-modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-modal-content {
+  background: #fff;
+  border-radius: 14px;
+  max-width: 380px;
+  width: 80%;
+  padding: 18px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+
+  /* Animation */
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-modal.show .menu-modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.menu-modal img {
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.menu-modal h3 {
+  margin: 8px 0;
+  font-size: 22px;
+  color: #3a2c28;
+}
+
+.menu-modal p {
+  color: #5a4a42;
+  margin: 8px 0;
+}
+
+.price-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6b4a3a;
+}
+
+.menu-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+#addToCartBtn {
+  margin-top: 12px;
+  background: #6b4a3a;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#addToCartBtn:hover {
+  background: #4a3227;
 }
 
 /* Contact */
@@ -364,6 +482,88 @@ input:focus, textarea:focus { border-color: var(--brand); }
   transition: background 0.3s ease;
 }
 #order-summary button:hover { background: #3e261a; }
+
+/* Order Confirmation Modal */
+.order-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.order-modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+.order-modal-content {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: popUp 0.3s ease;
+}
+
+.order-modal-content h2 {
+  margin-bottom: 10px;
+  color: #6b4a3a;
+}
+
+.order-modal-content p {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.order-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===== Toast Notification ===== */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #6b4a3a;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Footer */
 .site-footer {
