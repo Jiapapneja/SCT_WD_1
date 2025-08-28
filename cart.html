@@ -4,9 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Order - Caffora</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="homepage.css">
   <link rel="stylesheet" href="cart.css">
 </head>
+ <!-- Header / Navbar -->
+<header class="site-header" id="top">
+  <nav class="nav">
+    <a class="brand" href="index.html#top">Caffora</a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="homepage.html#home" class="nav-link">Home</a></li>
+      <li><a href="homepage.html#menu" class="nav-link">Menu</a></li>
+      <li><a href="homepage.html#about" class="nav-link">About</a></li>
+      <li><a href="homepage.html#contact" class="nav-link btn-outline">Contact</a></li>
+      <button class="cart-btn" onclick="goToCart()"> CART (<span id="cart-count">0</span>)</button>
+    </ul>
+  </nav>
+</header>
+
 <body>
   <section id="order-summary">
     <h2>Your Order Summary</h2>
@@ -38,4 +63,5 @@
 
   <script src="cart.js"></script>
 </body>
+
 </html>

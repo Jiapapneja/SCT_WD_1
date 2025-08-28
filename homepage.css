@@ -16,6 +16,7 @@ body {
   color: var(--text);
   background: var(--bg);
   line-height: 1.55;
+  padding-top: 70px;
 }
 
 .container { width: min(1100px, 92%); margin: 0 auto; }
@@ -26,10 +27,16 @@ body {
   margin: 0 0 24px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Navbar */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 9999;
   background: rgba(106, 43, 11, 0.708);
   transition: background 0.3s ease, box-shadow 0.3s ease;
