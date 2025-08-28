@@ -143,3 +143,17 @@ function decreaseQuantity(item) {
     qtyElement.innerText = qty - 1;
   }
 }
+
+// BACK TO TOP BUTTON FIX
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTop = document.querySelector('.to-top');
+  if (backToTop) {
+    backToTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+});

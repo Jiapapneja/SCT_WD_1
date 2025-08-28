@@ -5,13 +5,19 @@ body {
   padding: 0;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; 
   background: linear-gradient(135deg, #f7ede2, #f8f6f4);
   background-image: radial-gradient(#e3d5ca 1px, transparent 1px);
   background-size: 30px 30px;
 }
 
+/* Main Content */
+main {
+  flex: 1;                
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Card Styling */
 .cart-summary {
   background: #fff;
